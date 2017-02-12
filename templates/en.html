@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="http://localhost:5000/static/normalize.css">
+    <link rel="stylesheet" href="http://localhost:5000/static/style.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js?config=TeX-AMS_HTML-full"></script>
+</head>
+
+<body>
+    <div id="container">
+        <div id="side_bar">
+            <nav>
+                <ul>
+                    <li>Minimax approx.</li>
+                    <li>Least squares</li>
+                    <li>Lagrange interpolation</li>
+                </ul>
+            </nav>
+
+        </div>
+
+        <div id="main">
+            <h1>Enter points for lagrange interpolation</h1>
+            <p>Note: separate numbers with spaces</p>
+            <form action="http://localhost:5000/result" method="POST">
+                <p>x <input type="text" id='x' /></p>
+                <p>y <input type="text" id='y' /></p>
+                <p><input type="submit" id="submit_btn" value="Find polynomial" /></p>
+            </form>
+            <div id="outer" style="width:100%">
+                <div id="myDiv" style="width: 800px; height: 400px;"></div>
+            </div>
+            <h1 id="formula"></h1>
+        </div>
+
+        <div id="lang">
+            <button id='en'>en</button>
+            <button id='ua'>ua</button>
+        </div>
+    </div>
+    <script src="http://localhost:5000/static/main.js"></script>
+</body>
+
+</html>
